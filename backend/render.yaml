@@ -1,0 +1,21 @@
+{
+  "name": "creator-analytics-backend",
+  "runtime": "python",
+  "buildCommand": "pip install -r requirements.txt",
+  "startCommand": "uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 1",
+  "envVars": [
+    {"key": "DATABASE_URL", "fromDatabase": {"name": "creator-analytics-db", "property": "connectionString"}},
+    {"key": "SECRET_KEY", "generateValue": true},
+    {"key": "REDIS_URL", "value": "redis://localhost:6379"},
+    {"key": "CORS_ORIGINS", "value": "[\"http://localhost:3000\", \"https://*.vercel.app\"]"},
+    {"key": "YOUTUBE_API_KEY", "fromGlobal": true},
+    {"key": "TIKTOK_API_KEY", "fromGlobal": true},
+    {"key": "INSTAGRAM_ACCESS_TOKEN", "fromGlobal": true},
+    {"key": "TWITTER_API_KEY", "fromGlobal": true},
+    {"key": "OPENAI_API_KEY", "fromGlobal": true}
+  ],
+  "databases": {
+    "name": "creator-analytics-db",
+    "plan": "free"
+  }
+}
