@@ -1,0 +1,21 @@
+#!/bin/bash
+# Push to GitHub - Run these commands
+
+echo "🔐 Authentication required for GitHub"
+echo ""
+echo "Option 1: If you have GitHub CLI (gh)"
+echo "   gh auth login"
+echo ""
+echo "Option 2: Use Personal Access Token"
+echo "   Run these commands:"
+echo ""
+echo "   git remote set-url origin https://YOUR_USERNAME:YOUR_TOKEN@github.com/varuoog755-creator/creator-analytics-saas.git"
+echo "   git push -u origin main"
+echo ""
+echo "To create a token:"
+echo "1. Go to: https://github.com/settings/tokens"
+echo "2. Click 'Generate new token (classic)'"
+echo "3. Select scopes: repo, read:org"
+echo "4. Copy the token"
+echo ""
+echo "Then replace YOUR_USERNAME and YOUR_TOKEN in the command above"
