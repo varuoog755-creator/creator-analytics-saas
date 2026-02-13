@@ -9,10 +9,6 @@ services:
         generateValue: true
       - key: CORS_ORIGINS
         value: "http://localhost:3000,https://*.vercel.app"
-      - key: YOUTUBE_API_KEY
-        fromGlobal: true
-      - key: OPENAI_API_KEY
-        fromGlobal: true
 
 databases:
   - name: creator-analytics-db
