@@ -70,7 +70,7 @@ async def update_user_profile(
 
 
 @router.get("/subscription")
-async def get_subscription(current_user = Depends(get_current_user):
+async def get_subscription(current_user = Depends(get_current_user)):
     """
     Get current subscription details.
     """
